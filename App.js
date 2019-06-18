@@ -47,8 +47,8 @@ export default class App extends Component<Props> {
     console.log( JSON.parse(message) )
 
     // Infura works
-    web3 = new Web3('https://mainnet.infura.io/');
-    // web3 = new Web3( JSON.parse(message) );
+    // web3 = new Web3('https://mainnet.infura.io/');
+    web3 = new Web3( JSON.parse(message) );
 
     web3.eth.getBlock(48, function(error, result){
       if(!error)
