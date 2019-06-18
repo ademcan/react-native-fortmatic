@@ -16,6 +16,8 @@ const Web3 = require('web3');
 // import Web3Webview from 'react-native-web3-webview';
 import { WebView } from 'react-native-webview';
 
+var GLOBALS = require('./globals');
+
 type Props = {};
 
 
@@ -38,19 +40,15 @@ export default class App extends Component<Props> {
 
   connect() {
     const web3 = new Web3( this.state.fmProvider );
-
     web3.eth.getBlock('latest').then(console.log)
-    // console.log("FORTMATIC....")
-    // console.log(fm)
-    // console.log(fm.getProvider())
   }
 
   getMessage = (message) => {
-    // let message  = event.nativeEvent.data;
     console.log( JSON.parse(message) )
 
+    // Infura works
     web3 = new Web3('https://mainnet.infura.io/');
-    // var web3 = new Web3( JSON.parse(message) );
+    // web3 = new Web3( JSON.parse(message) );
 
     web3.eth.getBlock(48, function(error, result){
       if(!error)
@@ -77,7 +75,7 @@ export default class App extends Component<Props> {
                 <script src="https://cdn.jsdelivr.net/npm/fortmatic@0.7.4/dist/fortmatic.js"></script>
                 
                 <script>
-                  let fm = new Fortmatic('');
+                  let fm = new Fortmatic('`+GLOBALS.fortmaticPkTest+`');
                   window.ReactNativeWebView.postMessage( JSON.stringify(fm.getProvider()) );
                 </script>
               </head>
@@ -88,11 +86,11 @@ export default class App extends Component<Props> {
           `}}
         />
 
-      <Button
+      {/* <Button
         onPress={this.connect}
         title="Connect"
         color="#841584"
-      />
+      /> */}
       </View>
     );
   }
