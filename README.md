@@ -1,6 +1,6 @@
 # How to run
 
-## Create a globals.js file containing your Fortmatics PK
+## Create a globals.js file containing your Fortmatic PK
 
 Create a new file called globals.js and include your Fortmatic PK as follow
 ```
