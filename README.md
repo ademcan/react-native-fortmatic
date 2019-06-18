@@ -1,5 +1,14 @@
 # How to run
 
+## Create a globals.js file containing your Fortmatics PK
+
+Create a new file called globals.js and include your Fortmatic PK as follow
+```
+exports.fortmaticPkTest = "pk_test_XXXXXXXXX";
+```
+
+## Run the mobile app
+
 ```bash
 git clone https://github.com/ademcan/react-native-fortmatic
 cd react-native-fortmatic

@@ -71,7 +71,6 @@ export default class App extends Component<Props> {
             <html>
               <head>
                 <title>TEST webview</title>
-                <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.36/dist/web3.min.js"></script>
                 <script src="https://cdn.jsdelivr.net/npm/fortmatic@0.7.4/dist/fortmatic.js"></script>
                 
                 <script>
@@ -80,7 +79,7 @@ export default class App extends Component<Props> {
                 </script>
               </head>
               <body>
-                <h1>Hello world</h1>
+                <h1>Testing Fortmatic on RN</h1>
               </body>
             </html>
           `}}
